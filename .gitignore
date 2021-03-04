@@ -185,10 +185,6 @@ pip-selfcheck.json
 .history
 .ionide
 
-### vscode ###
-!.vscode/settings.json
-!.vscode/extensions.json
-
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db

@@ -1,9 +1,9 @@
 class Hotel:
-    def __init__(self, nom: str, prix: int, enseigne=None):
+    def __init__(self, nom: str, prix: int):
         self.nom = nom
         self.prix = prix
-        self.enseigne = enseigne
-
+        self.enseigne = None
+        
     @property
     def nom(self):
         return self.__nom
