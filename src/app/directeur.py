@@ -12,8 +12,8 @@ class Directeur:
 
     @nom.setter
     def nom(self, nom: str) -> None:
-        if not len(nom) > 5:
-            raise ValueError('Le nom doit avoir plus de 5 caractères')
+        if not isinstance(nom, str) or not len(nom) >= 5:
+            raise ValueError('Le nom doit être une string de 5 caractères minimum')
         self.__nom = nom
 
     @property
@@ -22,7 +22,6 @@ class Directeur:
 
     @hotel.setter
     def hotel(self, hotel: Hotel = None) -> None:
-        print(type(hotel),flush=True)
         if hotel and not isinstance(hotel, Hotel):
             raise ValueError(
                 'Le paramètre hotel n\'est pas de la classe Hotel')

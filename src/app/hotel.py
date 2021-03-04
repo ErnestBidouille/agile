@@ -1,7 +1,8 @@
 class Hotel:
-    def __init__(self, nom: str, prix: int):
+    def __init__(self, nom: str, prix: int, enseigne=None):
         self.nom = nom
         self.prix = prix
+        self.enseigne = enseigne
 
     @property
     def nom(self):
@@ -9,8 +10,9 @@ class Hotel:
 
     @nom.setter
     def nom(self, nom: str):
-        if not isinstance(nom, str) or not len(nom) > 5:
-            raise ValueError('Le nom doit être une string de plus de 5 caractères')
+        if not isinstance(nom, str) or not len(nom) >= 5:
+            raise ValueError(
+                'Le nom doit être une string de 5 caractères minimum')
         self.__nom = nom
 
     @property
@@ -20,10 +22,19 @@ class Hotel:
     @prix.setter
     def prix(self, prix: int):
         if not isinstance(prix, int) or prix < 0:
-            raise ValueError('Le paramètre prix doit être supérieur ou égal à 0')
+            raise ValueError(
+                'Le paramètre prix doit être un entier supérieur ou égal à 0')
         self.__prix = prix
 
-    def prix_total(self, nb_personnes : int):
+    @property
+    def enseigne(self):
+        return self.__enseigne
+
+    @enseigne.setter
+    def enseigne(self, enseigne):
+        self.__enseigne = enseigne
+
+    def prix_total(self, nb_personnes: int):
         if nb_personnes < 1:
             raise ValueError('Il doit y avoir au moins une personne')
         return self.prix * nb_personnes

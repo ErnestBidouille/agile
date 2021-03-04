@@ -1,0 +1,4 @@
+[report]
+[run]
+omit=
+    venv/*
