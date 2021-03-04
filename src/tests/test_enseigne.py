@@ -1,4 +1,3 @@
-from _pytest.python_api import raises
 import pytest
 from typing import Set
 from ..app.enseigne import Enseigne
