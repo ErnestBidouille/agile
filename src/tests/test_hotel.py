@@ -2,6 +2,7 @@ import pytest
 from ..app.hotel import Hotel
 from ..app.enseigne import Enseigne
 
+
 @pytest.fixture()
 def get_hotel_nom() -> str:
     return 'Mercure Test'
@@ -53,6 +54,7 @@ def test_prix_total(get_hotel, get_hotel_prix):
     nb_personnes_test = 5
     assert get_hotel.prix_total(
         nb_personnes_test) == get_hotel_prix * nb_personnes_test
+
 
 def test_get_enseigne(get_hotel):
     assert get_hotel.enseigne == None

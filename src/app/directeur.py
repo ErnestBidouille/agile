@@ -13,7 +13,8 @@ class Directeur:
     @nom.setter
     def nom(self, nom: str) -> None:
         if not isinstance(nom, str) or not len(nom) >= 5:
-            raise ValueError('Le nom doit être une string de 5 caractères minimum')
+            raise ValueError(
+                'Le nom doit être une string de 5 caractères minimum')
         self.__nom = nom
 
     @property

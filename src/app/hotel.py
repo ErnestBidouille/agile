@@ -3,7 +3,7 @@ class Hotel:
         self.nom = nom
         self.prix = prix
         self.enseigne = None
-        
+
     @property
     def nom(self):
         return self.__nom
