@@ -20,7 +20,7 @@ def on_ajoute_a_l_enseigne_l_hotel(context):
 def l_hotel_est_dans_la_liste_des_hotels(context):
     assert context.enseigne.hotels.pop() == context.hotel
 
+
 @then('L\'hotel a pour enseigne l\'enseigne')
 def l_hotel_a_pour_enseigne_l_enseigne(context):
     assert context.hotel.enseigne == context.enseigne
-    
