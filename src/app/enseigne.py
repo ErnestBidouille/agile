@@ -10,7 +10,7 @@ class Enseigne:
             if hotel and not isinstance(hotel, Hotel):
                 self.__hotels = set()
                 raise ValueError(
-                    'Le parametre hotel doit être une liste d\'hotels')
+                    'Le parametre hotels doit être une liste d\'hotels')
             self.__hotels.add(hotel)
 
     @property
