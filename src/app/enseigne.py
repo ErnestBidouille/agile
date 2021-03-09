@@ -3,7 +3,7 @@ from typing import Iterable
 
 
 class Enseigne:
-    def __init__(self, nom: str, hotels: Iterable[Hotel]) -> None:
+    def __init__(self, nom: str, hotels: Iterable[Hotel] = []) -> None:
         self.nom = nom
         self.__hotels = set()
         for hotel in hotels:
@@ -41,4 +41,3 @@ class Enseigne:
             hotel.enseigne = None
         except KeyError:
             raise KeyError('L\'hotel n\'est pas dans la liste')
-
